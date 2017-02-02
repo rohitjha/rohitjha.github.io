@@ -482,7 +482,7 @@ input[type="radio"] + label:before{border-radius:100%;}
 .image.fit{display:block;margin:0 0 2.25em 0;width:100%;}
 .image.fit img{display:block;width:100%;}
 ol{list-style:decimal;margin:0 0 2.25em 0;padding-left:1.25em;}
-ol li{padding-left:0.25em;text-align:justify;}
+ol li{padding-left:0.25em;text-align:justify; margin: 0 0 1em 0;}
 ul{list-style:disc;margin:0 0 2.25em 0;padding-left:1em;}
 ul li{padding-left:0.5em;}
 ul.alt{list-style:none;padding-left:0;}
