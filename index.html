@@ -7,14 +7,12 @@
 		<META NAME="ROBOTS" CONTENT="ALL">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
-
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="assets/css/lato.css" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.css" /> -->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
 	</head>
 	<body>
 
@@ -350,12 +348,30 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js" defer="true"></script>
-			<script src="assets/js/jquery.scrollzer.min.js" async="true" defer="true"></script>
-			<script src="assets/js/jquery.scrolly.min.js" async="true" defer="true"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js" async="true" defer="true"></script>
 			<script src="assets/js/util.js" async="true" defer="true"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js" async="true" defer="true"></script>
+			<script async="true" defer="true">
+				function loadStyleSheet(src){
+		            if (document.createStyleSheet) document.createStyleSheet(src);
+		            else {
+		                var stylesheet = document.createElement('link');
+		                stylesheet.href = src;
+		                stylesheet.rel = 'stylesheet';
+		                stylesheet.type = 'text/css';
+		                document.getElementsByTagName('head')[0].appendChild(stylesheet);
+		            }
+		        }
+
+		        $(function() {
+		        	loadStyleSheet("assets/css/font-awesome.min.css");
+		        	loadStyleSheet("assets/css/lato.css");
+		        	loadStyleSheet("assets/css/main.css");
+				});
+			</script>
 	</body>
 </html>
